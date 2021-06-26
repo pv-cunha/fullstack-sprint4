@@ -1,0 +1,33 @@
+.breadcrumbs {
+  padding: 0 0.5rem 0.5rem 0.5rem;
+
+  border-bottom: 1px solid #eee;
+}
+
+.breadcrumbsNav {
+  padding-bottom: 0.5rem;
+}
+
+.breadcrumbsList {
+  display: flex;
+}
+
+.breadcrumbsList a {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #878787;
+}
+
+.breadcrumbsList a:hover {
+  border-bottom: 1px solid #333;
+}
+
+.breadcrumbsList li strong {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.breadcrumbsSeparator {
+  display: flex;
+  margin: 0 8px;
+}

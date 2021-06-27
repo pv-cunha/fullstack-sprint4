@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Breadcrumbs = (props) => {
   return (
-    <div className={styles.breadcrumbs}>
+    <div className={`${styles.breadcrumbs} container`}>
       <nav className={styles.breadcrumbsNav}>
         <ol className={styles.breadcrumbsList}>
           <li>

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Menu.module.css';
-import MenuItem from '../menuItem/MenuItem';
+import MenuItem from './menuItem/MenuItem';
 
 const Menu = () => {
   const [data, setData] = React.useState(null);

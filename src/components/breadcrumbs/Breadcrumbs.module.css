@@ -31,3 +31,15 @@
   display: flex;
   margin: 0 8px;
 }
+
+@media (max-width: 48rem) {
+  .breadcrumbs {
+    display: none;
+  }
+}
+
+@media (min-width: 48rem) and (max-width: 75rem) {
+  .breadcrumbs {
+    display: none;
+  }
+}

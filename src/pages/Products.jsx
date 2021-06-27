@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Products.module.css';
+import Filter from '../components/filter/Filter';
 import ProductItem from '../components/productItem/ProductItem';
 import Loading from '../components/loading/Loading';
 import Alert from '../components/alert/Alert';
@@ -13,22 +14,26 @@ const Products = () => {
   }, [request]);
 
   return (
-    <section className={`${styles.products} container`}>
+    <section className={`container`}>
+      {data && <Filter filters={data} />}
+
       {loading && <Loading />}
       {error && <Alert />}
 
-      {data &&
-        data
-          .slice(0, data.length - 1)
-          .map((product) => (
-            <ProductItem
-              key={product.sku}
-              imageUrl={product.image}
-              description={product.name}
-              price={product.price}
-              sku={product.sku}
-            />
-          ))}
+      <ul className={styles.productsList}>
+        {data &&
+          data
+            .slice(0, data.length - 1)
+            .map((product) => (
+              <ProductItem
+                key={product.sku}
+                imageUrl={product.image}
+                description={product.name}
+                price={product.price}
+                sku={product.sku}
+              />
+            ))}
+      </ul>
     </section>
   );
 };

@@ -1,0 +1,95 @@
+.footerLinks {
+  background-color: #f6f6f6;
+  margin-top: 40px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+}
+
+.linksContacts {
+  width: 30%;
+  display: flex;
+}
+
+.col {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.contactIcon {
+  text-align: center;
+}
+
+.contactIconImg {
+  display: block;
+  margin: auto;
+  width: 25px;
+}
+
+.contactIconTxt {
+  padding: 0.5rem;
+  font-size: 0.8125rem;
+  white-space: pre-line;
+}
+
+.linksSeparator {
+  width: 1px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.linksList {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  padding: 3.125rem;
+  list-style: none;
+}
+
+.linksList ul {
+  list-style: none;
+}
+
+.companyLinks {
+  flex-grow: 1;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.companyLinksItem {
+  padding-top: 8px;
+}
+
+.companyLinksTitle {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
+
+.companyLinksTxt {
+  line-height: 25px;
+  font-size: 0.6875rem;
+  font-weight: 400;
+  color: black;
+}
+
+.companyLinksTxt:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 48rem) {
+  .links {
+    flex-direction: column;
+  }
+
+  .linksList {
+    padding: 0.2rem;
+    justify-content: start;
+  }
+}
+
+@media (min-width: 48rem) and (max-width: 75rem) {
+}

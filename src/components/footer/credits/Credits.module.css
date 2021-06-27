@@ -1,0 +1,26 @@
+.credits {
+  background-color: #f6f6f6;
+  padding: 1.25rem 0.8rem;
+
+  width: 100%;
+}
+
+.creditsBottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  width: 84%;
+}
+
+.copyrightTxt {
+  font-size: 0.5625rem;
+  font-weight: 400;
+  color: #261e1e;
+}
+
+.copyrightStamp {
+  margin: 0 auto;
+}

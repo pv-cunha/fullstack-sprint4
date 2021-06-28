@@ -39,7 +39,7 @@ const ProductsProvider = ({ children }) => {
       response = await fetch('/products');
 
       if (!response.ok) {
-        throw new Error('Erro ao carregar os dados !');
+        throw new Error('Erro ao carregar os dados dos produtos !');
       }
 
       json = await response.json();
@@ -61,7 +61,7 @@ const ProductsProvider = ({ children }) => {
       response = await fetch('/filters');
 
       if (!response.ok) {
-        throw new Error('Erro ao carregar os dados !');
+        throw new Error('Erro ao carregar os dados dos filtros !');
       }
 
       json = await response.json();

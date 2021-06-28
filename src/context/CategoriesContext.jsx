@@ -35,7 +35,7 @@ const CategoriesProvider = ({ children }) => {
       response = await fetch('/all');
 
       if (!response.ok) {
-        throw new Error('Erro ao carregar os dados !');
+        throw new Error('Erro ao carregar os dados das categorias !');
       }
 
       json = await response.json();
@@ -55,7 +55,7 @@ const CategoriesProvider = ({ children }) => {
       response = await fetch('/current');
 
       if (!response.ok) {
-        throw new Error('Erro ao carregar os dados !');
+        throw new Error('Erro ao carregar os dados das breadcrumbs!');
       }
 
       json = await response.json();

@@ -12,22 +12,24 @@ const Products = () => {
   const { current } = useCategories();
 
   return (
-    <section className="container animeLeft">
+    <main className="container animeLeft">
       {current && <Breadcrumbs breadcrumbs={current} />}
       {loading && <Loading />}
 
       {filters && <Filter filters={filters} />}
 
-      <ul className={styles.productsList}>
-        {filtered !== null
-          ? filtered.map((product) => (
-              <ProductItem key={product.sku} product={product} />
-            ))
-          : products.map((product) => (
-              <ProductItem key={product.sku} product={product} />
-            ))}
-      </ul>
-    </section>
+      <section>
+        <ul className={styles.productsList}>
+          {filtered !== null
+            ? filtered.map((product) => (
+                <ProductItem key={product.sku} product={product} />
+              ))
+            : products.map((product) => (
+                <ProductItem key={product.sku} product={product} />
+              ))}
+        </ul>
+      </section>
+    </main>
   );
 };
 

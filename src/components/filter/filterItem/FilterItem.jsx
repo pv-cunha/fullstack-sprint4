@@ -14,7 +14,7 @@ const FilterItem = ({ label }) => {
 };
 
 FilterItem.propTypes = {
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
 };
 
 export default FilterItem;

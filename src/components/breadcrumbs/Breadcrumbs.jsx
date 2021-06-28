@@ -1,33 +1,23 @@
 import React from 'react';
 import styles from './Breadcrumbs.module.css';
-import PropTypes from 'prop-types';
+import BreadcrumbsItem from './breadcrumbsItems/BreadcrumbsItem';
 
-const Breadcrumbs = (props) => {
+const Breadcrumbs = ({ breadcrumbs }) => {
   return (
     <div className={`${styles.breadcrumbs} container`}>
       <nav className={styles.breadcrumbsNav}>
         <ol className={styles.breadcrumbsList}>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li className={styles.breadcrumbsSeparator}>/</li>
-          <li>
-            <a href="#">Infantil</a>
-          </li>
-          <li className={styles.breadcrumbsSeparator}>/</li>
-          <li>
-            <a href="#">Personagens</a>
-          </li>
-          <li className={styles.breadcrumbsSeparator}>/</li>
-          <li>
-            <strong>Mario Bros</strong>
-          </li>
+          {breadcrumbs.map((breadcrumb, index) => (
+            <BreadcrumbsItem
+              key={breadcrumb.id}
+              breadcrumb={breadcrumb}
+              active={breadcrumbs.length - 1 === index}
+            />
+          ))}
         </ol>
       </nav>
     </div>
   );
 };
-
-Breadcrumbs.propTypes = {};
 
 export default Breadcrumbs;

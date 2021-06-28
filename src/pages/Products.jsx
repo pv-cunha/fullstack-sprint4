@@ -1,37 +1,30 @@
 import React from 'react';
 import styles from './Products.module.css';
+import Breadcrumbs from '../components/breadcrumbs/Breadcrumbs';
 import Filter from '../components/filter/Filter';
 import ProductItem from '../components/productItem/ProductItem';
 import Loading from '../components/loading/Loading';
-import Alert from '../components/alert/Alert';
-import useFetch from '../hooks/useFetch';
+import { useProducts } from '../context/ProductsContext';
+import { useCategories } from '../context/CategoriesContext';
 
 const Products = () => {
-  const { data, error, loading, request } = useFetch();
-
-  React.useEffect(() => {
-    request('/products');
-  }, [request]);
+  const { products, filtered, filters, loading } = useProducts();
+  const { current } = useCategories();
 
   return (
-    <section className={`container`}>
-      {data && <Filter filters={data} />}
-
+    <section className="container animeLeft">
+      {current && <Breadcrumbs breadcrumbs={current} />}
       {loading && <Loading />}
-      {error && <Alert />}
+
+      {filters && <Filter filters={filters} />}
 
       <ul className={styles.productsList}>
-        {data &&
-          data
-            .slice(0, data.length - 1)
-            .map((product) => (
-              <ProductItem
-                key={product.sku}
-                imageUrl={product.image}
-                description={product.name}
-                price={product.price}
-                sku={product.sku}
-              />
+        {filtered !== null
+          ? filtered.map((product) => (
+              <ProductItem key={product.sku} product={product} />
+            ))
+          : products.map((product) => (
+              <ProductItem key={product.sku} product={product} />
             ))}
       </ul>
     </section>

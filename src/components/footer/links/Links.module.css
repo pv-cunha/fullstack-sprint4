@@ -88,8 +88,20 @@
   .linksList {
     padding: 0.2rem;
     justify-content: start;
+
+    width: 100%;
+  }
+
+  .linksContacts {
+    width: 100%;
+
+    margin-bottom: 1rem;
   }
 }
 
 @media (min-width: 48rem) and (max-width: 75rem) {
+  .linksContacts {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }

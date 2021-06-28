@@ -1,18 +1,17 @@
 import React from 'react';
 import './App.css';
 import Header from './components/header/Header';
-import Breadcrumbs from './components/breadcrumbs/Breadcrumbs';
 import Products from './pages/Products';
 import Footer from './components/footer/Footer';
+import AppProvider from './context';
 
 const App = () => {
   return (
-    <div>
+    <AppProvider>
       <Header />
-      <Breadcrumbs />
       <Products />
       <Footer />
-    </div>
+    </AppProvider>
   );
 };
 

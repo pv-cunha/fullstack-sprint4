@@ -5,7 +5,7 @@
 }
 
 @media (max-width: 48rem) {
-  .products {
+  .productsList {
     grid-template-columns: 1fr 1fr;
   }
 }

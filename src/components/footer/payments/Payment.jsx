@@ -62,7 +62,7 @@ const Payment = () => {
           <h3 className={styles.paymentTitle}>Siga a Riachuelo</h3>
           <div className={styles.socialIcons}>
             <div className={styles.socialIcon}>
-              <a href="#url">
+              <a href="#url" title="Ícone Facebook">
                 <img
                   className={styles.iconImg}
                   src="assets/ico-facebook.svg"
@@ -72,7 +72,7 @@ const Payment = () => {
             </div>
 
             <div className={styles.socialIcon}>
-              <a href="#url">
+              <a href="#url" title="Ícone Instagram RCHLO">
                 <img
                   className={styles.iconImg}
                   src="assets/ico-instagram.svg"
@@ -83,7 +83,7 @@ const Payment = () => {
             </div>
 
             <div className={styles.socialIcon}>
-              <a href="#url">
+              <a href="#url" title="Ícone Instagram Casa RCHLO">
                 <img
                   className={styles.iconImg}
                   src="assets/ico-instagram.svg"
@@ -94,7 +94,7 @@ const Payment = () => {
             </div>
 
             <div className={styles.socialIcon}>
-              <a href="#url">
+              <a href="#url" title="Ícone Pinterest">
                 <img
                   className={styles.iconImg}
                   src="assets/ico-pinterest.svg"
@@ -103,7 +103,7 @@ const Payment = () => {
               </a>
             </div>
             <div className={styles.socialIcon}>
-              <a href="#url">
+              <a href="#url" title="Ícone Twitter">
                 <img
                   className={styles.iconImg}
                   src="assets/ico-twitter.svg"
@@ -112,7 +112,7 @@ const Payment = () => {
               </a>
             </div>
             <div className={styles.socialIcon}>
-              <a href="#url">
+              <a href="#url" title="Ícone Youtube">
                 <img
                   className={styles.iconImg}
                   src="assets/ico-youtube.svg"
@@ -121,7 +121,7 @@ const Payment = () => {
               </a>
             </div>
             <div className={styles.socialIcon}>
-              <a href="#url">
+              <a href="#url" title="Ícone LinkedIn">
                 <img
                   className={styles.iconImg}
                   src="assets/ico-linkedin.svg"
@@ -133,7 +133,7 @@ const Payment = () => {
         </div>
         <div className={styles.paymentAccessibility}>
           <h3 className={styles.paymentTitle}>Acessibilidade</h3>
-          <img src="assets/ico-a11y.webp" alt="" />
+          <img src="assets/ico-a11y.webp" alt="Ícone NVDA" />
         </div>
       </div>
     </section>

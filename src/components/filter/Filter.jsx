@@ -6,12 +6,9 @@ const Filter = ({ filters }) => {
   return (
     <section className={`${styles.filter} container`}>
       <ul className={styles.filterList}>
-        {filters &&
-          filters
-            .slice(filters.length - 1, filters.length)[0]
-            .filters.map((filter) => (
-              <FilterItem key={filter.id} label={filter.label} />
-            ))}
+        {filters.map((filter) => (
+          <FilterItem key={filter.id} label={filter.label} />
+        ))}
       </ul>
     </section>
   );

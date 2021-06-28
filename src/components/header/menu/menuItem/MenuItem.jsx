@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './MenuItem.module.css';
 
-const MenuItem = ({ label, link }) => {
+const MenuItem = ({ category }) => {
+  const { label, link } = category;
+
   return (
     <li className={styles.menuItem}>
       <a href={link}>
@@ -13,8 +15,7 @@ const MenuItem = ({ label, link }) => {
 };
 
 MenuItem.propTypes = {
-  label: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
+  category: PropTypes.object.isRequired,
 };
 
 export default MenuItem;

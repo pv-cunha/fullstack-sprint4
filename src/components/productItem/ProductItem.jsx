@@ -2,14 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './ProductItem.module.css';
 
-const ProductItem = ({ imageUrl, description, price, sku }) => {
+const ProductItem = ({ product }) => {
+  const { name, image, price, sku } = product;
   return (
-    <li className={styles.listItem} aria-labelledby={`${imageUrl}-${sku}`}>
+    <li className={styles.listItem} aria-labelledby={`${image}-${sku}`}>
       <div className={styles.card}>
         <figure>
-          <img src={imageUrl} alt={description} className={styles.img} />
-          <figcaption className={styles.description} id={`${imageUrl}-${sku}`}>
-            {description}
+          <img src={image} alt={name} className={styles.img} />
+          <figcaption className={styles.description} id={`${image}-${sku}`}>
+            {name}
           </figcaption>
           <span>
             <p className={styles.price}>R$ {price}</p>
@@ -21,10 +22,7 @@ const ProductItem = ({ imageUrl, description, price, sku }) => {
 };
 
 ProductItem.propTypes = {
-  imageUrl: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
-  sku: PropTypes.number.isRequired,
+  product: PropTypes.object.isRequired,
 };
 
 export default ProductItem;

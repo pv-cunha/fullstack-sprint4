@@ -2,13 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Alert.module.css';
 
-const Alert = ({ alert }) => {
-  if (!alert) return null;
-  return <p className={styles.alert}>{alert}</p>;
+const Alert = ({ alerts }) => {
+  return (
+    alerts.length > 0 &&
+    alerts.map((alert) => (
+      <p key={alert.id} className={styles.alert}>
+        {alert.text}
+      </p>
+    ))
+  );
 };
 
 Alert.propTypes = {
-  alert: PropTypes.string.isRequired,
+  alert: PropTypes.array,
 };
 
 export default Alert;

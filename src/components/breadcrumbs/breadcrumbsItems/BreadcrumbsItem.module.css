@@ -1,0 +1,23 @@
+.link {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #878787;
+}
+
+.link.active {
+  color: #333;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.link:hover {
+  border-bottom: 1px solid #333;
+}
+
+.separator {
+  margin: 0 0.5rem;
+}
+
+.separator.display {
+  display: none;
+}

@@ -1,5 +1,5 @@
 {
-  "categories": [
+  "all": [
     {
       "id": 1,
       "label": "Novidades",
@@ -59,29 +59,27 @@
       "id": 12,
       "label": "Outlet",
       "link": "#home"
+    }
+  ],
+  "current": [
+    {
+      "id": 1,
+      "link": "#home",
+      "name": "Home"
     },
     {
-      "current": [
-        {
-          "id": 1,
-          "link": "#home",
-          "label": "Home"
-        },
-        {
-          "id": 2,
-          "link": "#home",
-          "label": "Infantil"
-        },
-        {
-          "id": 3,
-          "link": "#home",
-          "label": "Personagens"
-        },
-        {
-          "id": 4,
-          "label": "Mario Bros"
-        }
-      ]
+      "id": 2,
+      "link": "#home",
+      "name": "Infantil"
+    },
+    {
+      "id": 3,
+      "link": "#home",
+      "name": "Personagens"
+    },
+    {
+      "id": 4,
+      "name": "Mario Bros"
     }
   ],
 
@@ -155,32 +153,30 @@
     {
       "sku": 12,
       "image": "assets/c12.webp",
-      "name": "Camiseta Infantil Manga Curta Mário Bros Vermelha Tam 4 a 10",
+      "name": "Camiseta Infantil Manga Curta MÃ¡rio Bros Vermelha Tam 4 a 10",
       "price": "39,90"
+    }
+  ],
+  "filters": [
+    {
+      "id": "size",
+      "label": "Tamanho"
     },
     {
-      "filters": [
-        {
-          "id": "size",
-          "label": "Tamanho"
-        },
-        {
-          "id": "color",
-          "label": "Cor"
-        },
-        {
-          "id": "department",
-          "label": "Departamento"
-        },
-        {
-          "id": "category",
-          "label": "Categoria"
-        },
-        {
-          "id": "sleeve",
-          "label": "Manga"
-        }
-      ]
+      "id": "color",
+      "label": "Cor"
+    },
+    {
+      "id": "department",
+      "label": "Departamento"
+    },
+    {
+      "id": "category",
+      "label": "Categoria"
+    },
+    {
+      "id": "sleeve",
+      "label": "Manga"
     }
   ]
 }

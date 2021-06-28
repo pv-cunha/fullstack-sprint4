@@ -12,26 +12,6 @@
   display: flex;
 }
 
-.breadcrumbsList a {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #878787;
-}
-
-.breadcrumbsList a:hover {
-  border-bottom: 1px solid #333;
-}
-
-.breadcrumbsList li strong {
-  font-size: 0.8rem;
-  font-weight: bold;
-}
-
-.breadcrumbsSeparator {
-  display: flex;
-  margin: 0 8px;
-}
-
 @media (max-width: 48rem) {
   .breadcrumbs {
     display: none;
